@@ -1,0 +1,37 @@
+package com.yang.bruce.newmiui.permission;
+
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.support.v4.content.ContextCompat;
+
+/**
+ * Author: 0027008122 [yang.jianan@zte.com.cn]
+ * Time: 2016-08-02 11:33
+ * Version: 1.0
+ * TaskId:
+ * Description:检查权限的工具类
+ */
+public class PermissionsChecker {
+    private final Context mContext;
+
+    public PermissionsChecker(Context context) {
+        mContext = context.getApplicationContext();
+    }
+
+    // 判断权限集合
+    public boolean lacksPermissions(String... permissions) {
+
+        for (String permission : permissions) {
+            if (lacksPermission(permission)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // 判断是否缺少权限
+    private boolean lacksPermission(String permission) {
+        return ContextCompat.checkSelfPermission(mContext, permission) ==
+                PackageManager.PERMISSION_DENIED;
+    }
+}
