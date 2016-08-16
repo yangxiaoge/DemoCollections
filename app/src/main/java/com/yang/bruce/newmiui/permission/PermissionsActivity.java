@@ -120,7 +120,7 @@ public class PermissionsActivity extends AppCompatActivity {
     private void showMissingPermissionDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(PermissionsActivity.this);
         builder.setTitle("Help");
-        builder.setMessage("Current applications lack the necessary permissions。\\n\\nPlease click\\\"Setting\\\"-\\\"Permission\\\"-Grant the permission。\\n\\nAnd click back twice.");
+        builder.setMessage("Current applications lack the necessary permissions。\n\nPlease click\"Setting\"-\"Permission\"-Grant the permission。\n\nAnd click back twice.");
 
         // 拒绝, 退出应用
         builder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {

@@ -17,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <!--PermissionsActivity一定不可以忘记申明-->
+        <activity android:name=".permission.PermissionsActivity"/>
         <activity android:name=".radiobutton.CheckboxRadiobuttonDemoActivity"/>
         <activity android:name=".webview_progress.MainWebViewActivity"/>
         <activity android:name=".webview_progress.WebViewProgressActivity"/>

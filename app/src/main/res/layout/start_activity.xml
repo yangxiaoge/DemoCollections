@@ -28,7 +28,7 @@
         android:layout_below="@+id/dynamic_iamge"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="52dp"
-        android:text="进度条WebView"
+        android:text="进度条WebView以及获取联系人"
         android:textAllCaps="false"/>
 
 </RelativeLayout>

@@ -109,7 +109,7 @@ public class WebViewProgressActivity extends SupportActivity {
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
                     allowToReadContacts = false;
-
+                    //finish(); // 关闭当前页面
                 }
             });
             builder.setCancelable(false);
