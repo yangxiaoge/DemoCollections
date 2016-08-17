@@ -23,6 +23,7 @@
         <activity android:name=".webview_progress.MainWebViewActivity"/>
         <activity android:name=".webview_progress.WebViewProgressActivity"/>
         <activity android:name=".dynamic_image.DynamicActivity"/>
+        <activity android:name=".judge_json.JudgeJsonActivity"/>
     </application>
 
 </manifest>

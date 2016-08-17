@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">NewMIUI</string>
+    <string name="json">{"amount":"8","msisdn":"952016042045"}</string>
+    <string name="json1">{
+  "beforeBal": "99150.00",
+  "sucAmount": "8.00",
+  "afterBal": "99158.00",
+  "addDays": "0",
+  "expireDate": "2016-05-01 00:00:00",
+  "transDate": "2016-08-17 08:53:44"
+}</string>
 </resources>

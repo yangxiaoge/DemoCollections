@@ -31,4 +31,14 @@
         android:text="进度条WebView以及获取联系人"
         android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/judge_json"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:text="判断Json"
+        android:textAllCaps="false"
+        android:layout_below="@+id/radio_button"
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>

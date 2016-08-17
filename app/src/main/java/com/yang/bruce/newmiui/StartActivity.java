@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.yang.bruce.newmiui.dynamic_image.DynamicActivity;
+import com.yang.bruce.newmiui.judge_json.JudgeJsonActivity;
 import com.yang.bruce.newmiui.radiobutton.CheckboxRadiobuttonDemoActivity;
 import com.yang.bruce.newmiui.webview_progress.WebViewProgressActivity;
 
@@ -28,7 +29,7 @@ public class StartActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.dynamic_iamge, R.id.radio_button, R.id.webview_with_progress})
+    @OnClick({R.id.dynamic_iamge, R.id.radio_button, R.id.webview_with_progress,R.id.judge_json})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.dynamic_iamge:
@@ -39,6 +40,9 @@ public class StartActivity extends AppCompatActivity {
                 break;
             case R.id.webview_with_progress:
                 startActivity(new Intent(this, WebViewProgressActivity.class));
+                break;
+            case R.id.judge_json:
+                startActivity(new Intent(this, JudgeJsonActivity.class));
                 break;
         }
     }
