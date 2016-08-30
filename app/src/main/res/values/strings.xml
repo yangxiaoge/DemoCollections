@@ -9,4 +9,11 @@
   "expireDate": "2016-05-01 00:00:00",
   "transDate": "2016-08-17 08:53:44"
 }</string>
+
+    <string name="action_fastscroll">Fast scroll</string>
+    <string name="action_addpadding">Add padding</string>
+    <string name="action_showShadow">Show shadow</string>
+    <string name="action_showHeaderAndFooter">Show Header &amp; Footer</string>
+    <string name="action_updateDataset">Update dataset</string>
+
 </resources>

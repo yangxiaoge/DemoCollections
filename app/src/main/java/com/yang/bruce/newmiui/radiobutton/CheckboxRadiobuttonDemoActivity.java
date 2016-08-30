@@ -1,7 +1,6 @@
 package com.yang.bruce.newmiui.radiobutton;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -73,7 +72,7 @@ public class CheckboxRadiobuttonDemoActivity extends Activity {
 
                 // 实现 TextView同时显示两种风格文字 http://txlong-onz.iteye.com/blog/1142781
                 SpannableStringBuilder sb = new SpannableStringBuilder(newLoanList);
-                final ForegroundColorSpan fcs = new ForegroundColorSpan(Color.WHITE);
+                final ForegroundColorSpan fcs = new ForegroundColorSpan(getResources().getColor(R.color.transparent));
                 sb.setSpan(fcs, loanList[j].length(), maxLen, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
                 radioButton.setText(sb);
             } else {

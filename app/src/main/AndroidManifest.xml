@@ -24,6 +24,10 @@
         <activity android:name=".webview_progress.WebViewProgressActivity"/>
         <activity android:name=".dynamic_image.DynamicActivity"/>
         <activity android:name=".judge_json.JudgeJsonActivity"/>
+        <activity android:name=".group_listview.PinnedSectionListActivity"/>
+        <activity android:name=".bottombar.BottomBarActivity"/>
+        <activity android:name=".day_night_theme.activity.DayNightActivity"/>
+        <activity android:name=".day_night_theme.activity.AuthorActivity"/>
     </application>
 
 </manifest>

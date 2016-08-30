@@ -16,8 +16,8 @@
         android:id="@+id/radio_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/webview_with_progress"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:text="多行多列的RadioButton"
         android:textAllCaps="false"/>
 
@@ -27,7 +27,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/dynamic_iamge"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
         android:text="进度条WebView以及获取联系人"
         android:textAllCaps="false"/>
 
@@ -35,10 +34,46 @@
         android:id="@+id/judge_json"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:text="判断Json"
-        android:textAllCaps="false"
         android:layout_below="@+id/radio_button"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:text="判断Json"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/judge_json"
+        android:layout_marginTop="46dp"
+        android:layout_toStartOf="@+id/judge_json"
+        android:text="分组ListView"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/expandListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/listview"
+        android:layout_toEndOf="@+id/judge_json"
+        android:text="ExpandListView"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/button_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/listview"
+        android:layout_below="@+id/listview"
+        android:layout_marginTop="33dp"
+        android:text="BottomBar"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="夜间模式!"
+        android:id="@+id/day_night"
+        android:layout_alignBottom="@+id/button_bar"
+        android:layout_alignEnd="@+id/expandListView"/>
 
 </RelativeLayout>
