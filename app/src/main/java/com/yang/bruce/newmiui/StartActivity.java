@@ -44,6 +44,7 @@ public class StartActivity extends AppCompatActivity {
         for (Object anObject : object) {
             JsonObject jo = new JsonObject(); //构造json
             jo.addProperty("offerCode", (String) anObject);
+            jo.addProperty("action","1");
             jsonArr.add(jo);
         }
         Toast.makeText(this, "构造json 数组  " + jsonArr.toString(), Toast.LENGTH_SHORT).show();
