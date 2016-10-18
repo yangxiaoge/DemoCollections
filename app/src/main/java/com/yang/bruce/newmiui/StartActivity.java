@@ -3,6 +3,7 @@ package com.yang.bruce.newmiui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -16,6 +17,8 @@ import com.yang.bruce.newmiui.judge_json.JudgeJsonActivity;
 import com.yang.bruce.newmiui.radiobutton.CheckboxRadiobuttonDemoActivity;
 import com.yang.bruce.newmiui.webview_progress.WebViewProgressActivity;
 
+import java.util.ArrayList;
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -27,6 +30,7 @@ import butterknife.OnClick;
  * Description:
  */
 public class StartActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +40,44 @@ public class StartActivity extends AppCompatActivity {
         //构造json 数组
         constructionJsonArray();
 
+        Log.d("onCreate: ","onCreate");
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("onStart: ","onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("onResume: ","onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("onPause: ","onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("onStop: ","onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("onDestroy: ","onDestroy");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("onRestart: ","onRestart");
     }
 
     private void constructionJsonArray() {
@@ -44,11 +86,29 @@ public class StartActivity extends AppCompatActivity {
         for (Object anObject : object) {
             JsonObject jo = new JsonObject(); //构造json
             jo.addProperty("offerCode", (String) anObject);
-            jo.addProperty("action","1");
+            jo.addProperty("action", "1");
             jsonArr.add(jo);
         }
         Toast.makeText(this, "构造json 数组  " + jsonArr.toString(), Toast.LENGTH_SHORT).show();
         System.out.println("jsonArr:  " + jsonArr.toString());
+
+        //得到手机最大允许内存的,即超过指定内存,则开始回收
+        long maxMemory = Runtime.getRuntime().maxMemory();
+        Toast.makeText(this, "maxMemory : " + maxMemory, Toast.LENGTH_SHORT).show();
+
+        ArrayList<String> removeFreebiesCodeList = new ArrayList<>();
+        removeFreebiesCodeList.add("1");
+        removeFreebiesCodeList.add("2");
+        removeFreebiesCodeList.add("3");
+        removeFreebiesCodeList.add("4");
+        removeFreebiesCodeList.add("5");
+        System.out.println("list to string" + removeFreebiesCodeList.toString());
+        Toast.makeText(this, removeFreebiesCodeList.toString(), Toast.LENGTH_SHORT).show();
+        Bundle bundle = new Bundle();
+        bundle.putStringArrayList("removeFreebiesCodeList", removeFreebiesCodeList);
+        ArrayList<String> string = bundle.getStringArrayList("removeFreebiesCodeList");
+        string.add("21312");
+        System.out.println("新的removeFreebiesCodeList" + string.toString());
     }
 
     @OnClick({R.id.dynamic_iamge, R.id.radio_button, R.id.webview_with_progress,
