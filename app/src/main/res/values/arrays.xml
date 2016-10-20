@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="home_menu_name">
+        <item>Top Up</item>
+        <item>Bundle History</item>
+        <item>My Bill</item>
+        <item>Contact Us</item>
+        <item>Nearby Store</item>
+        <item>Flow packet</item>
+        <item>Billing query</item>
+        <item>Hot Bundle</item>
+    </string-array>
+</resources>

@@ -12,6 +12,7 @@ import com.google.gson.JsonObject;
 import com.yang.bruce.newmiui.bottombar.BottomBarActivity;
 import com.yang.bruce.newmiui.day_night_theme.activity.DayNightActivity;
 import com.yang.bruce.newmiui.dynamic_image.DynamicActivity;
+import com.yang.bruce.newmiui.gridview.GridViewActivity;
 import com.yang.bruce.newmiui.group_listview.PinnedSectionListActivity;
 import com.yang.bruce.newmiui.judge_json.JudgeJsonActivity;
 import com.yang.bruce.newmiui.radiobutton.CheckboxRadiobuttonDemoActivity;
@@ -112,7 +113,8 @@ public class StartActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.dynamic_iamge, R.id.radio_button, R.id.webview_with_progress,
-            R.id.judge_json, R.id.listview, R.id.expandListView, R.id.button_bar, R.id.day_night})
+            R.id.judge_json, R.id.listview, R.id.expandListView, R.id.button_bar,
+            R.id.day_night,R.id.gridview})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.dynamic_iamge:
@@ -138,6 +140,9 @@ public class StartActivity extends AppCompatActivity {
                 break;
             case R.id.day_night:
                 startActivity(new Intent(this, DayNightActivity.class));
+                break;
+            case R.id.gridview:
+                startActivity(new Intent(this, GridViewActivity.class));
                 break;
         }
     }

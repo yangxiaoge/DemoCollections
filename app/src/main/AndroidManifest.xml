@@ -28,6 +28,7 @@
         <activity android:name=".bottombar.BottomBarActivity"/>
         <activity android:name=".day_night_theme.activity.DayNightActivity"/>
         <activity android:name=".day_night_theme.activity.AuthorActivity"/>
+        <activity android:name=".gridview.GridViewActivity"/>
     </application>
 
 </manifest>
