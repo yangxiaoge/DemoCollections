@@ -29,6 +29,7 @@
         <activity android:name=".day_night_theme.activity.DayNightActivity"/>
         <activity android:name=".day_night_theme.activity.AuthorActivity"/>
         <activity android:name=".gridview.GridViewActivity"/>
+        <activity android:name=".reselect_radiobutton.ReSelectRadioButtonActivity"/>
     </application>
 
 </manifest>

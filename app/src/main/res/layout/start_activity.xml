@@ -90,5 +90,15 @@
             android:text="GridView"
             android:textAllCaps="false"/>
 
+        <Button
+            android:textAllCaps="false"
+            android:id="@+id/radiobutton_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RadioButton 重启状态保存"
+            android:layout_alignTop="@+id/gridview"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="19dp"/>
+
     </RelativeLayout>
 </ScrollView>
