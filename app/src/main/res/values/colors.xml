@@ -20,4 +20,6 @@
 
     <color name="login_btn_color_pressed">#FF0A6BE7</color>
     <color name="main_tab_text_normal_color">#999999</color>
+
+    <color name="wave_background">#3F51B5</color>
 </resources>

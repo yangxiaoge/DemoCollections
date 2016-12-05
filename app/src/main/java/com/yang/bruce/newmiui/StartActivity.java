@@ -16,6 +16,7 @@ import com.yang.bruce.newmiui.gridview.GridViewActivity;
 import com.yang.bruce.newmiui.group_listview.PinnedSectionListActivity;
 import com.yang.bruce.newmiui.judge_json.JudgeJsonActivity;
 import com.yang.bruce.newmiui.radiobutton.CheckboxRadiobuttonDemoActivity;
+import com.yang.bruce.newmiui.refresh_layout.PublicRefreshLayout_Activity;
 import com.yang.bruce.newmiui.reselect_radiobutton.ReSelectRadioButtonActivity;
 import com.yang.bruce.newmiui.webview_progress.WebViewProgressActivity;
 
@@ -42,44 +43,44 @@ public class StartActivity extends AppCompatActivity {
         //构造json 数组
         constructionJsonArray();
 
-        Log.d("onCreate: ","onCreate");
+        Log.d("onCreate: ", "onCreate");
 
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("onStart: ","onStart");
+        Log.d("onStart: ", "onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("onResume: ","onResume");
+        Log.d("onResume: ", "onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("onPause: ","onPause");
+        Log.d("onPause: ", "onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("onStop: ","onStop");
+        Log.d("onStop: ", "onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("onDestroy: ","onDestroy");
+        Log.d("onDestroy: ", "onDestroy");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d("onRestart: ","onRestart");
+        Log.d("onRestart: ", "onRestart");
     }
 
     private void constructionJsonArray() {
@@ -115,7 +116,7 @@ public class StartActivity extends AppCompatActivity {
 
     @OnClick({R.id.dynamic_iamge, R.id.radio_button, R.id.webview_with_progress,
             R.id.judge_json, R.id.listview, R.id.expandListView, R.id.button_bar,
-            R.id.day_night,R.id.gridview,R.id.radiobutton_select})
+            R.id.day_night, R.id.gridview, R.id.radiobutton_select, R.id.refresh_layout})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.dynamic_iamge:
@@ -147,6 +148,9 @@ public class StartActivity extends AppCompatActivity {
                 break;
             case R.id.radiobutton_select:
                 startActivity(new Intent(this, ReSelectRadioButtonActivity.class));
+                break;
+            case R.id.refresh_layout:
+                startActivity(new Intent(this, PublicRefreshLayout_Activity.class));
                 break;
         }
     }

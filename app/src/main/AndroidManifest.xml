@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.yang.bruce.newmiui">
+    package="com.yang.bruce.newmiui">
 
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,23 +13,24 @@
         android:theme="@style/AppTheme">
         <activity android:name=".StartActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <!--PermissionsActivity一定不可以忘记申明-->
-        <activity android:name=".permission.PermissionsActivity"/>
-        <activity android:name=".radiobutton.CheckboxRadiobuttonDemoActivity"/>
-        <activity android:name=".webview_progress.MainWebViewActivity"/>
-        <activity android:name=".webview_progress.WebViewProgressActivity"/>
-        <activity android:name=".dynamic_image.DynamicActivity"/>
-        <activity android:name=".judge_json.JudgeJsonActivity"/>
-        <activity android:name=".group_listview.PinnedSectionListActivity"/>
-        <activity android:name=".bottombar.BottomBarActivity"/>
-        <activity android:name=".day_night_theme.activity.DayNightActivity"/>
-        <activity android:name=".day_night_theme.activity.AuthorActivity"/>
-        <activity android:name=".gridview.GridViewActivity"/>
-        <activity android:name=".reselect_radiobutton.ReSelectRadioButtonActivity"/>
+        <activity android:name=".permission.PermissionsActivity" />
+        <activity android:name=".radiobutton.CheckboxRadiobuttonDemoActivity" />
+        <activity android:name=".webview_progress.MainWebViewActivity" />
+        <activity android:name=".webview_progress.WebViewProgressActivity" />
+        <activity android:name=".dynamic_image.DynamicActivity" />
+        <activity android:name=".judge_json.JudgeJsonActivity" />
+        <activity android:name=".group_listview.PinnedSectionListActivity" />
+        <activity android:name=".bottombar.BottomBarActivity" />
+        <activity android:name=".day_night_theme.activity.DayNightActivity" />
+        <activity android:name=".day_night_theme.activity.AuthorActivity" />
+        <activity android:name=".gridview.GridViewActivity" />
+        <activity android:name=".reselect_radiobutton.ReSelectRadioButtonActivity" />
+        <activity android:name=".refresh_layout.PublicRefreshLayout_Activity" />
     </application>
 
 </manifest>

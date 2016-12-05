@@ -1,104 +1,118 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/dynamic_iamge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="44dp"
+                android:text="动态模糊效果" />
+
+            <Button
+                android:id="@+id/radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/webview_with_progress"
+                android:layout_centerHorizontal="true"
+                android:text="多行多列的RadioButton"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/webview_with_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dynamic_iamge"
+                android:layout_centerHorizontal="true"
+                android:text="进度条WebView以及获取联系人"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/judge_json"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio_button"
+                android:layout_centerHorizontal="true"
+                android:text="判断Json"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/listview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/judge_json"
+                android:layout_marginTop="46dp"
+                android:layout_toStartOf="@+id/judge_json"
+                android:text="分组ListView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/expandListView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/listview"
+                android:layout_toEndOf="@+id/judge_json"
+                android:text="ExpandListView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/button_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/listview"
+                android:layout_below="@+id/listview"
+                android:layout_marginTop="33dp"
+                android:text="BottomBar"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/day_night"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/button_bar"
+                android:layout_alignEnd="@+id/expandListView"
+                android:text="夜间模式!" />
+
+            <Button
+                android:id="@+id/gridview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button_bar"
+                android:layout_marginTop="24dp"
+                android:layout_toStartOf="@+id/dynamic_iamge"
+                android:text="GridView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/radiobutton_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/gridview"
+                android:layout_marginTop="19dp"
+                android:text="RadioButton 重启状态保存"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
 
         <Button
-            android:id="@+id/dynamic_iamge"
+            android:id="@+id/refresh_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="44dp"
-            android:text="动态模糊效果"/>
-
-        <Button
-            android:id="@+id/radio_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/webview_with_progress"
-            android:layout_centerHorizontal="true"
-            android:text="多行多列的RadioButton"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/webview_with_progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/dynamic_iamge"
-            android:layout_centerHorizontal="true"
-            android:text="进度条WebView以及获取联系人"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/judge_json"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/radio_button"
-            android:layout_centerHorizontal="true"
-            android:text="判断Json"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/listview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/judge_json"
-            android:layout_marginTop="46dp"
-            android:layout_toStartOf="@+id/judge_json"
-            android:text="分组ListView"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/expandListView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/listview"
-            android:layout_toEndOf="@+id/judge_json"
-            android:text="ExpandListView"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/button_bar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/listview"
-            android:layout_below="@+id/listview"
-            android:layout_marginTop="33dp"
-            android:text="BottomBar"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/day_night"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/button_bar"
-            android:layout_alignEnd="@+id/expandListView"
-            android:text="夜间模式!"/>
-
-        <Button
-            android:id="@+id/gridview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/button_bar"
-            android:layout_marginTop="24dp"
-            android:layout_toStartOf="@+id/dynamic_iamge"
-            android:text="GridView"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:textAllCaps="false"
-            android:id="@+id/radiobutton_select"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="RadioButton 重启状态保存"
-            android:layout_alignTop="@+id/gridview"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="19dp"/>
-
-    </RelativeLayout>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="19dp"
+            android:text="通用刷新布局"
+            android:textAllCaps="false" />
+    </LinearLayout>
 </ScrollView>
