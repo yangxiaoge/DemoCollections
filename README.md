@@ -13,3 +13,4 @@
 - 分组 ListView
 - 公用的刷新布局 (好看的哟)
 - MoveViewDemoActivity [一个Demo带你彻底掌握View的滑动冲突](http://blog.csdn.net/tyk0910/article/details/53414299) (鸿洋微信号推送)
+- [MultiType](https://github.com/drakeet/MultiType)使用

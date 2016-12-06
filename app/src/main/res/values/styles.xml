@@ -29,4 +29,11 @@
         <item name="clockBackground">@color/color3F3F3F</item>
         <item name="clockTextColor">@color/color8A9599</item>
     </style>
+
+    <style name="Simple"/>
+
+    <style name="Simple.Frame">
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@drawable/square_border</item>
+    </style>
 </resources>
