@@ -18,6 +18,7 @@ import com.yang.bruce.newmiui.judge_json.JudgeJsonActivity;
 import com.yang.bruce.newmiui.radiobutton.CheckboxRadiobuttonDemoActivity;
 import com.yang.bruce.newmiui.refresh_layout.PublicRefreshLayout_Activity;
 import com.yang.bruce.newmiui.reselect_radiobutton.ReSelectRadioButtonActivity;
+import com.yang.bruce.newmiui.view_move.MoveViewDemoActivity;
 import com.yang.bruce.newmiui.webview_progress.WebViewProgressActivity;
 
 import java.util.ArrayList;
@@ -116,8 +117,9 @@ public class StartActivity extends AppCompatActivity {
 
     @OnClick({R.id.dynamic_iamge, R.id.radio_button, R.id.webview_with_progress,
             R.id.judge_json, R.id.listview, R.id.expandListView, R.id.button_bar,
-            R.id.day_night, R.id.gridview, R.id.radiobutton_select, R.id.refresh_layout})
-    public void onClick(View view) {
+            R.id.day_night, R.id.gridview, R.id.radiobutton_select, R.id.refresh_layout,
+            R.id.move_view_demo})
+    public void onClickLis(View view) {
         switch (view.getId()) {
             case R.id.dynamic_iamge:
                 startActivity(new Intent(this, DynamicActivity.class));
@@ -151,6 +153,9 @@ public class StartActivity extends AppCompatActivity {
                 break;
             case R.id.refresh_layout:
                 startActivity(new Intent(this, PublicRefreshLayout_Activity.class));
+                break;
+            case R.id.move_view_demo:
+                startActivity(new Intent(this, MoveViewDemoActivity.class));
                 break;
         }
     }

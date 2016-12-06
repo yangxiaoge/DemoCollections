@@ -31,6 +31,7 @@
         <activity android:name=".gridview.GridViewActivity" />
         <activity android:name=".reselect_radiobutton.ReSelectRadioButtonActivity" />
         <activity android:name=".refresh_layout.PublicRefreshLayout_Activity" />
+        <activity android:name=".view_move.MoveViewDemoActivity" />
     </application>
 
 </manifest>

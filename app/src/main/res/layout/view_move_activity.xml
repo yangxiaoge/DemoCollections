@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TimePicker
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.yang.bruce.newmiui.view_move.MyParentView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- ScrollView 下拉与 MyParentView 冲突, 需要重写MyParentView的 onInterceptTouchEvent方法-->
+        <com.yang.bruce.newmiui.view_move.MyScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorAccent"
+                    android:gravity="center" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/radiobox_select"
+                        android:drawableRight="@drawable/ic_expandable"
+                        android:gravity="center"
+                        android:text="111111111" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/radiobox_select"
+                        android:drawableRight="@drawable/ic_expandable"
+                        android:gravity="center"
+                        android:text="22222222" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/radiobox_select"
+                        android:drawableRight="@drawable/ic_expandable"
+                        android:gravity="center"
+                        android:text="33333333" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/radiobox_select"
+                        android:drawableRight="@drawable/ic_expandable"
+                        android:gravity="center"
+                        android:text="44444444444" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/radiobox_select"
+                        android:drawableRight="@drawable/ic_expandable"
+                        android:gravity="center"
+                        android:text="5555555555" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/radiobox_select"
+                        android:drawableRight="@drawable/ic_expandable"
+                        android:gravity="center"
+                        android:text="666666666" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/radiobox_select"
+                        android:drawableRight="@drawable/ic_expandable"
+                        android:gravity="center"
+                        android:text="77777777777777777" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/radiobox_select"
+                        android:drawableRight="@drawable/ic_expandable"
+                        android:gravity="center"
+                        android:text="8888888888888888" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/radiobox_select"
+                        android:drawableRight="@drawable/ic_expandable"
+                        android:gravity="center"
+                        android:text="999999999999999999999" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/radiobox_select"
+                        android:drawableRight="@drawable/ic_expandable"
+                        android:gravity="center"
+                        android:text="12412451616161" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/radiobox_select"
+                        android:drawableRight="@drawable/ic_expandable"
+                        android:gravity="center"
+                        android:text="832389511" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/radiobox_select"
+                        android:drawableRight="@drawable/ic_expandable"
+                        android:gravity="center"
+                        android:text="611595979" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.yang.bruce.newmiui.view_move.MyScrollView>
+
+    </com.yang.bruce.newmiui.view_move.MyParentView>
+
+</LinearLayout>
