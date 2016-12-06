@@ -2,8 +2,8 @@ package com.yang.bruce.newmiui.MultiType_Use_Demo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import com.yang.bruce.newmiui.MultiType_Use_Demo.model.Category;
 import com.yang.bruce.newmiui.MultiType_Use_Demo.model.CategoryViewProvider;
@@ -23,6 +23,9 @@ import me.drakeet.multitype.MultiTypeAdapter;
  * </pre>
  */
 public class MultiType_Demo_Activity extends AppCompatActivity {
+
+    // 瀑布流
+    private static final int SPAN_COUNT = 2;
 
     private MultiTypeAdapter adapter;
     /* Items 等价于 ArrayList<Object> */
@@ -47,6 +50,18 @@ public class MultiType_Demo_Activity extends AppCompatActivity {
             items.add(new Category("专辑" + i + 1));
             items.add(new Song("" + i, R.drawable.dayu));
         }
+
+        final GridLayoutManager layoutManager = new GridLayoutManager(this, SPAN_COUNT);
+        GridLayoutManager.SpanSizeLookup spanSizeLookup = new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                Object item = items.get(position);
+                return SPAN_COUNT;
+            }
+        };
+        layoutManager.setSpanSizeLookup(spanSizeLookup);
+        recyclerView.setLayoutManager(layoutManager);
+
         recyclerView.setAdapter(adapter);
 
     }
