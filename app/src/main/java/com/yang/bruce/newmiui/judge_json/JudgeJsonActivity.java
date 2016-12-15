@@ -9,8 +9,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.yang.bruce.newmiui.ChangeProfileEventBean;
 import com.yang.bruce.newmiui.R;
+import com.yang.bruce.newmiui.SPUtils;
+import com.yang.bruce.newmiui.ShowDialogForNetWorkState;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 import org.json.JSONObject;
 
 import butterknife.ButterKnife;
@@ -37,6 +42,28 @@ public class JudgeJsonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.judge_json_activity);
         ButterKnife.inject(this);
+        EventBus.getDefault().register(this);
+        SPUtils spUtils = new SPUtils(this, "showDialog");
+
+//        while (spUtils.getBoolean("show")){
+//            ShowDialogForNetWorkState.showDialog(this, "无网络o(╯□╰)o");
+//        }
+
+    }
+
+    @Subscribe
+    public void hideWaitingDialog(ChangeProfileEventBean event) {
+        Toast.makeText(this, event.showDialog + " : " + event.success, Toast.LENGTH_SHORT).show();
+        // 其中一个接口访问结束(成功失败都算)
+        if (event.showDialog && event.success) {
+            ShowDialogForNetWorkState.showDialog(this, "mpt  有网络 judge_dialog");
+            Toast.makeText(this, "judge", Toast.LENGTH_SHORT).show();
+        }
+        if (event.showDialog && !event.success) {
+            ShowDialogForNetWorkState.showDialog(this, "非 mpt 无网络");
+
+        }
+
     }
 
     @OnClick({R.id.button2, R.id.button3})

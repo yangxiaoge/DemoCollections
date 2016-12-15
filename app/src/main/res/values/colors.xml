@@ -22,4 +22,16 @@
     <color name="main_tab_text_normal_color">#999999</color>
 
     <color name="wave_background">#3F51B5</color>
+
+    <!--circle progressbar color array-->
+    <integer-array name="cbp_colors">
+        <item>@color/cbp_color_1</item>
+        <item>@color/cbp_color_2</item>
+        <item>@color/cbp_color_3</item>
+        <item>@color/cbp_color_4</item>
+    </integer-array>
+    <color name="cbp_color_1">#3e802f</color>
+    <color name="cbp_color_2">#f4b400</color>
+    <color name="cbp_color_3">#427fed</color>
+    <color name="cbp_color_4">#b23424</color>
 </resources>

@@ -3,8 +3,11 @@ package com.yang.bruce.newmiui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.JsonArray;
@@ -16,11 +19,15 @@ import com.yang.bruce.newmiui.dynamic_image.DynamicActivity;
 import com.yang.bruce.newmiui.gridview.GridViewActivity;
 import com.yang.bruce.newmiui.group_listview.PinnedSectionListActivity;
 import com.yang.bruce.newmiui.judge_json.JudgeJsonActivity;
+import com.yang.bruce.newmiui.nice_loading_progress.NiceLoadingProgressBar;
 import com.yang.bruce.newmiui.radiobutton.CheckboxRadiobuttonDemoActivity;
 import com.yang.bruce.newmiui.refresh_layout.PublicRefreshLayout_Activity;
 import com.yang.bruce.newmiui.reselect_radiobutton.ReSelectRadioButtonActivity;
 import com.yang.bruce.newmiui.view_move.MoveViewDemoActivity;
 import com.yang.bruce.newmiui.webview_progress.WebViewProgressActivity;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 
@@ -35,17 +42,41 @@ import butterknife.OnClick;
  * Description:
  */
 public class StartActivity extends AppCompatActivity {
+    View rootView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.start_activity);
+        rootView = View.inflate(this, R.layout.start_activity, null);
+        setContentView(rootView);
         ButterKnife.inject(this);
+        EventBus.getDefault().register(this);
+        // 注册监听广播 ,  这每一个Activity中都要监听!
+//        IntentFilter filter = new IntentFilter();
+//        filter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
+//        filter.addAction("android.net.wifi.WIFI_STATE_CHANGE");
+//        filter.addAction("android.net.wifi.STATE_CHANGE");
+//        registerReceiver(new NetworkConnectChangedReceiver(), filter);
 
         //构造json 数组
         constructionJsonArray();
 
         Log.d("onCreate: ", "onCreate");
+        SPUtils spUtils = new SPUtils(this, "showDialog");
+
+    }
+
+    @Subscribe
+    public void hideWaitingDialog(ChangeProfileEventBean event) {
+        Toast.makeText(this, event.showDialog + " : " + event.success, Toast.LENGTH_SHORT).show();
+        // 其中一个接口访问结束(成功失败都算)
+        if (event.showDialog && event.success) {
+            ShowDialogForNetWorkState.showDialog(this, "startactivity_dialog 有网络");
+            Toast.makeText(this, "首页", Toast.LENGTH_SHORT).show();
+        }
+        if (event.showDialog && !event.success) {
+            ShowDialogForNetWorkState.showDialog(this, "startactivity_dialog 无网络");
+        }
 
     }
 
@@ -94,12 +125,12 @@ public class StartActivity extends AppCompatActivity {
             jo.addProperty("action", "1");
             jsonArr.add(jo);
         }
-        Toast.makeText(this, "构造json 数组  " + jsonArr.toString(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "构造json 数组  " + jsonArr.toString(), Toast.LENGTH_SHORT).show();
         System.out.println("jsonArr:  " + jsonArr.toString());
 
         //得到手机最大允许内存的,即超过指定内存,则开始回收
         long maxMemory = Runtime.getRuntime().maxMemory();
-        Toast.makeText(this, "maxMemory : " + maxMemory, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "maxMemory : " + maxMemory, Toast.LENGTH_SHORT).show();
 
         ArrayList<String> removeFreebiesCodeList = new ArrayList<>();
         removeFreebiesCodeList.add("1");
@@ -108,7 +139,7 @@ public class StartActivity extends AppCompatActivity {
         removeFreebiesCodeList.add("4");
         removeFreebiesCodeList.add("5");
         System.out.println("list to string" + removeFreebiesCodeList.toString());
-        Toast.makeText(this, removeFreebiesCodeList.toString(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, removeFreebiesCodeList.toString(), Toast.LENGTH_SHORT).show();
         Bundle bundle = new Bundle();
         bundle.putStringArrayList("removeFreebiesCodeList", removeFreebiesCodeList);
         ArrayList<String> string = bundle.getStringArrayList("removeFreebiesCodeList");
@@ -119,7 +150,7 @@ public class StartActivity extends AppCompatActivity {
     @OnClick({R.id.dynamic_iamge, R.id.radio_button, R.id.webview_with_progress,
             R.id.judge_json, R.id.listview, R.id.expandListView, R.id.button_bar,
             R.id.day_night, R.id.gridview, R.id.radiobutton_select, R.id.refresh_layout,
-            R.id.move_view_demo,R.id.multi_type_demo})
+            R.id.move_view_demo, R.id.multi_type_demo, R.id.nice_loading_progress})
     public void onClickLis(View view) {
         switch (view.getId()) {
             case R.id.dynamic_iamge:
@@ -133,6 +164,7 @@ public class StartActivity extends AppCompatActivity {
                 break;
             case R.id.judge_json:
                 startActivity(new Intent(this, JudgeJsonActivity.class));
+                this.finish();
                 break;
             case R.id.listview:
                 startActivity(new Intent(this, PinnedSectionListActivity.class));
@@ -161,6 +193,11 @@ public class StartActivity extends AppCompatActivity {
             case R.id.multi_type_demo:
                 startActivity(new Intent(this, MultiType_Demo_Activity.class));
                 break;
+            case R.id.nice_loading_progress:
+                startActivity(new Intent(this, NiceLoadingProgressBar.class));
+                break;
         }
     }
+
+
 }

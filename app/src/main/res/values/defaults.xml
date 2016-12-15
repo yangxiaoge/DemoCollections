@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--默认值-->
+<resources>
+    <!-- 圆形progressbar start -->
+    <!-- 默认颜色 -->
+    <color name="cpb_default_color">#33b5e5</color>
+    <!-- 默认宽度 -->
+    <dimen name="cpb_default_stroke_width">4dp</dimen>
+    <!-- 默认圆环最小缺口角度 -->
+    <integer name="cpb_default_min_sweep_angle">20</integer>
+    <!-- 默认圆环最大缺口角度 -->
+    <integer name="cpb_default_max_sweep_angle">300</integer>
+    <item name="cpb_default_sweep_speed" format="float" type="string">1</item>
+    <!-- 默认转动速度 -->
+    <item name="cpb_default_rotation_speed" format="float" type="string">1</item>
+    <!-- 圆形progressbar end -->
+</resources>

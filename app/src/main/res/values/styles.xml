@@ -30,10 +30,20 @@
         <item name="clockTextColor">@color/color8A9599</item>
     </style>
 
-    <style name="Simple"/>
+    <style name="Simple" />
 
     <style name="Simple.Frame">
         <item name="android:padding">16dp</item>
         <item name="android:background">@drawable/square_border</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        //设置为true，背景就是灰色的了，反正你一看就知道是设置什么的
+        <item name="android:backgroundDimEnabled">true</item>
     </style>
 </resources>

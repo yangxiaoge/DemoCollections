@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:allowBackup="true"
@@ -33,6 +37,18 @@
         <activity android:name=".refresh_layout.PublicRefreshLayout_Activity" />
         <activity android:name=".view_move.MoveViewDemoActivity" />
         <activity android:name=".MultiType_Use_Demo.MultiType_Demo_Activity" />
+        <activity android:name=".nice_loading_progress.NiceLoadingProgressBar" />
+        <activity android:name=".TranslucetActivity"
+            android:theme="@style/Theme.Transparent"/>
+
+        <!-- 静态注册 广播接收器 -->
+        <!--<receiver android:name=".NetworkConnectChangedReceiver">
+            <intent-filter>
+                <action android:name="android.NET.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.Net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>-->
     </application>
 
 </manifest>
